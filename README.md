@@ -8,7 +8,7 @@ Also includes a small example.
 
 Download Python Lolesports-API
 
-`git clone https://gitlab.com/leolo/lolesports-api-python.git`
+`git clone https://github.com/gustavo-luz/lolapiv1
 
 Install dependency
 
