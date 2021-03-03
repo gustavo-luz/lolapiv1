@@ -10,9 +10,26 @@ Download Python Lolesports-API
 
 `git clone https://github.com/gustavo-luz/lolapiv1
 
+Activate venv
+
+'source bin/activate'
+
+Para desativar
+'deactivate'
+
+select python interpreter at settings.json to 
+"python.pythonPath": "/home/gustavo-luz/HDD/manjaro/code/python/lolapi/bin/python3.8",
+
+
+
 Install dependency
 
 `pip3 install requests`
+
+
+
+
+
 
 
 BIG vs MOUZ
@@ -35,28 +52,10 @@ https://feed.lolesports.com/livestats/v1/window/105562556576287734?startingTime=
 
 https://feed.lolesports.com/livestats/v1/window/105562692794240177?startingTime=2021-03-02T21:00:00Z
 
-LLLA vs KBMA
-2021-03-02T20:00:00Z
-2021-03-02 17:00:00-03:00
-105562692794240160
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-PNGA vs REDA
-2021-03-02T21:00:00Z
-2021-03-02 18:00:00-03:00
-105562692794240178
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-FURA vs VRXA
-2021-03-02T22:00:00Z
-2021-03-02 19:00:00-03:00
-105562692794240146
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-RNSA vs ITZA
-2021-03-02T23:00:00Z
-2021-03-02 20:00:00-03:00
-105562692794240156
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-FLAA vs CRZA
-2021-03-03T00:00:00Z
-2021-03-02 21:00:00-03:00
-105562692794240100
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
+https://feed.lolesports.com/livestats/v1/window/105562656844501232?startingTime=2021-03-03T16:30:00Z
+
+IHG vs RGO
+2021-03-03T16:30:00Z
+2021-03-03 13:30:00-03:00
+105562656844501232
+{'name': 'Ultraliga', 'slug': 'ultraliga'}

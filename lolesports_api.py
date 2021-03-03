@@ -3,11 +3,14 @@ import requests
 
 def get_latest_date():
     now = datetime.datetime.now(datetime.timezone.utc)
+    #return str(now)
     now = now - datetime.timedelta(
         seconds=now.second,
         microseconds=now.microsecond
     )
+    #return str(now)
     now_string = now.isoformat()
+    #return str(now_string)
     return str(now_string).replace('+00:00', 'Z')
 
 class Lolesports_API:
@@ -122,6 +125,19 @@ class Lolesports_API:
         )
 
         return json.loads(response.text)
+
+    def get_api(self, game_id, starting_time=get_latest_date()):
+        response = requests.get(
+            self.LIVESTATS_API + f'/window/{game_id}',
+            params={
+                'startingTime': starting_time
+            }
+        )
+
+        data=response.json(response)
+        print(data)
+
+
 
     def get_details(self, game_id, starting_time=get_latest_date(), participant_ids=None):
         response = self.session.get(

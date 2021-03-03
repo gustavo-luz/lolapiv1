@@ -9,10 +9,10 @@ print("funcionando2")
 live_matches = api.get_live()
 for live_match in live_matches['schedule']['events']:
     if live_match['state'] == 'finished':
-       id = '105562692794240160'
+       #id = '105562692794240160'
         #gameid = id + '2'
         #print(gameid)
-       if live_match['match']['id'] == id:
+       #if live_match['match']['id'] == id:
                 # tem 
                     print(f"{live_match['match']['teams'][0]['code']} vs {live_match['match']['teams'][1]['code']}")
                 #match id
@@ -26,8 +26,14 @@ for live_match in live_matches['schedule']['events']:
      
         #precisa do start time?
         #gameid = match id +2 se tiver começado ou +1 se n tiver
-current_game = api.get_window('105562692794240159')
-print(current_game)
+ 
+#idbusca = live_match['match']['id']
+#print(idbusca)
+
+#current_game = api.get_window(live_match['match']['id'])
+#print(current_game)
+
+
 #print(current_game)
 #print(current_game)
 #print(type(current_game))
@@ -37,11 +43,11 @@ print(current_game)
 
 
 
-'''
+"""
 split_point = [557]
 split_list = [list_of_dict_values[i: j]for i, j in zip([0] + 
 split_point,split_point+[None])]
-'''
+"""
 #print(list_of_dict_values[4])
 
 """                    
