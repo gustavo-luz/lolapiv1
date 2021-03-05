@@ -26,6 +26,7 @@ Install dependency
 
 `pip3 install requests`
 
+`pip install python-dateutil --upgrade`
 
 
 

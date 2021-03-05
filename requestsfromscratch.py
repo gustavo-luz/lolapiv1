@@ -23,14 +23,53 @@ conteudo = json.loads(r.content)
 print(type(conteudo))
 #print(conteudo)
 #reddit_data['data']['children']
-print(conteudo['frames'][0]['gameState'])
+estado = conteudo['frames'][0]['gameState']
+#print(estado)
 
-print("blue team")
-print(conteudo['frames'][0]['blueTeam']['totalGold'])
-print(conteudo['frames'][0]['blueTeam']['totalKills'])
-print(conteudo['frames'][0]['blueTeam']['towers'])
-print(conteudo['frames'][0]['blueTeam']['dragons'])
-print(conteudo['frames'][0]['blueTeam']['barons'])
+# ------------------------------------ TIME AZUL --------------
+#print("blue team")
+goldtime1 = conteudo['frames'][0]['blueTeam']['totalGold']
+#print(goldtime1)
+killstime1 = conteudo['frames'][0]['blueTeam']['totalKills']
+#print(killstime1)
+torrestime1 = conteudo['frames'][0]['blueTeam']['towers']
+#print(torrestime1)
+dragstime1 = conteudo['frames'][0]['blueTeam']['dragons']
+#print(dragstime1)
+baronstime1 = conteudo['frames'][0]['blueTeam']['barons']
+#print(baronstime1)
+
+# ------------------------------------ TIME VERMELHO --------------
+#print("red team ")
+goldtime2 = conteudo['frames'][0]['redTeam']['totalGold']
+print(goldtime2)
+killstime2 = conteudo['frames'][0]['redTeam']['totalKills']
+#print(killstime2)
+torrestime2 = conteudo['frames'][0]['redTeam']['towers']
+#print(torrestime2)
+dragstime2 = conteudo['frames'][0]['redTeam']['dragons']
+#print(dragstime2)
+baronstime2 = conteudo['frames'][0]['redTeam']['barons']
+#print(baronstime2)
+
+# ------------------------------------ +STATS --------------
+diffgold1 = goldtime1 - goldtime2
+"""
+if diffgold1 < 0:
+    diffgold1 = "+",diffgold1
+else:
+    diffgold1 = '-',diffgold1
+"""
+print(diffgold1)
+diffgold2 = goldtime2 - goldtime1
+print(diffgold2)
+
+
+# ------------------------------------ TABELA --------------
+print("estado do jogo\t",estado)
+print("-------------------------")
+print("%s:\t%i" % ("gold",goldtime1), diffgold1 )
+
 
 
 """
