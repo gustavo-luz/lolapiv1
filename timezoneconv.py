@@ -10,14 +10,30 @@ from lolesports_api import get_latest_date
 
 now = datetime.datetime.now(datetime.timezone.utc)
 print(now)
-now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond)
-print(now)
-from datetime import datetime, timedelta
-now = datetime.now() + timedelta(seconds=10)
+#subtraindo os segundos e microsegundos
+if now.second > 50:
+    now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=50)
+elif now.second > 40:
+    now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=40)
+elif now.second > 30:
+    now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=30)
+elif now.second > 20:
+    now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=20)
+elif now.second > 10:
+    now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=10)
+else:
+    now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond)
+
+
+
 print(now)
 
 now_string = now.isoformat()
-print(str(now_string).replace('+00:00', 'Z'))
+now_string = str(now_string).replace('+00:00', 'Z')
+print(now_string)
+
+starttime2 = get_latest_date()
+print(starttime2)
 
 """
 import datetime

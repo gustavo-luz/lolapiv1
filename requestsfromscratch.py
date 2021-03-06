@@ -6,18 +6,46 @@ import time
 from time import sleep
 
 # pip install python-urllib2 --upgrade
-id = "105658534675811020"
+id = "105658534675876630"
 
 
 while True:
 
     
     try:
+        
+        
+        now = datetime.datetime.now(datetime.timezone.utc)
+        print(now)
+        #subtraindo os segundos e microsegundos
+        if now.second > 50:
+            now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=50)
+        elif now.second > 40:
+            now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=40)
+        elif now.second > 30:
+            now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=30)
+        elif now.second > 20:
+            now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=20)
+        elif now.second > 10:
+            now = now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond) + datetime.timedelta(seconds=10)
+        else:
+            now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond)
+
+        sleep(20)
+
+        #print(now)
+
+        now_string = now.isoformat()
+        now_string = str(now_string).replace('+00:00', 'Z')
+        #print(now_string)
+        
 
         mais = "?startingTime="
         starttime = "2021-03-03T16:40:00Z"
-        starttime2 = get_latest_date()
+        starttime2 = now_string
+        #starttime2 = get_latest_date()
         print(starttime2)
+        #print(type(starttime2))
         complemento = id+mais+starttime2
         # print(complemento)
 

@@ -13,7 +13,8 @@ def handle_livematches():
         # ultraliga, primeleague
         #liga = 'lcs'
         for cronos in crono['schedule']['events']:
-            #if cronos['state'] == 'unstarted':
+            #"completed" "unstarted" "inProgress"
+            #if cronos['state'] == 'inProgress':
                 #if cronos['league']['slug'] == liga:
                 # tem 
                     print(f"{cronos['match']['teams'][0]['code']} vs {cronos['match']['teams'][1]['code']}")
