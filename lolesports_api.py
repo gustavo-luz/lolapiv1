@@ -13,6 +13,8 @@ def get_latest_date():
     #return str(now_string)
     return str(now_string).replace('+00:00', 'Z')
 
+#get_latest_date()
+
 class Lolesports_API:
     API_KEY = {'x-api-key': '0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z'}
     API_URL = 'https://esports-api.lolesports.com/persisted/gw'
