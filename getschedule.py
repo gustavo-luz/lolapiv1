@@ -9,13 +9,13 @@ def handle_livematches():
     while True:
         print("funcionando2")
         crono = api.get_schedule()
-        # lpl, cblol_academy, lcs
+        # lpl, cblol_academy, lcs, cblol-brazil
         # ultraliga, primeleague
-        #liga = 'lcs'
+        liga = 'cblol-brazil'
         for cronos in crono['schedule']['events']:
             #"completed" "unstarted" "inProgress"
-            if cronos['state'] == 'inProgress':
-                #if cronos['league']['slug'] == liga:
+            #if cronos['state'] == 'inProgress':
+                if cronos['league']['slug'] == liga:
                 # tem 
                     print(f"{cronos['match']['teams'][0]['code']} vs {cronos['match']['teams'][1]['code']}")
                 #match id

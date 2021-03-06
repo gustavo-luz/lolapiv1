@@ -7,7 +7,7 @@ api = Lolesports_API()
 def handle_livematches():
     #while True:
         print("funcionando2")
-        id = '105658534675811055'
+        id = '105539760574818415'
         live_matches = api.get_event_details(id)
         for live_match in live_matches['event']['match']['games']:
             #"completed" "unstarted" "inProgress"
