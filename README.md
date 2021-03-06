@@ -37,6 +37,7 @@ do jeito q ta agora n da erro nunca
 separar antes dos players
 ---
 colocar os nomes dos jogadores, champion, kda, porcentagem de vida de cada um, farm, gold individual
+botar um gráfico com a vida
 
 colocar o vs com o nome dos times
 
