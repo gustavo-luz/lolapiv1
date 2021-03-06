@@ -28,6 +28,8 @@ Install dependency
 
 `pip install python-dateutil --upgrade`
 
+executar a cada 10s, se n da erro
+
 
 
 
