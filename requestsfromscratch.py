@@ -9,10 +9,10 @@ from termcolor import colored
 # pip install python-urllib2 --upgrade
 
 #cblol
-#id = "105539760574818416"
+id = "105551618308363513"
 
 #lec
-id = "105539760574818392"
+#id = "105551618308363551"
 
 while True:
 
