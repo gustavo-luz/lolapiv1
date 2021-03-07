@@ -8,7 +8,7 @@ def handle_livematches():
         live_matches = api.get_live()
         for live_match in live_matches['schedule']['events']:
             #"completed" "unstarted" "inProgress"
-            if live_match['state'] == 'inProgress':
+            if live_match['state'] == 'unstarted':
                 print(f"{live_match['match']['teams'][0]['code']} vs {live_match['match']['teams'][1]['code']}")
                 get_live_game(api.get_event_details(live_match['id']))
                 sleep(60)

@@ -9,7 +9,7 @@ from termcolor import colored
 # pip install python-urllib2 --upgrade
 
 #cblol
-id = "105551618308363513"
+id = "105663539175467324"
 
 #lec
 #id = "105551618308363551"
@@ -131,7 +131,7 @@ while True:
 
         # ------------------------------------ TABELA BÁSICA --------------
         print("estado do jogo\t", estado)
-        print("-------------------------")
+        print("-----------------------------------------")
         #print("%s:\t%s" % ("gold", str(goldtime1) + " (" + diffgold1 + ")") )
         time1 = conteudo['gameMetadata']['blueTeamMetadata']['participantMetadata'][0]['summonerName']
         time1 = time1[0:3]
@@ -139,19 +139,23 @@ while True:
         time2 = time2[0:3]        
         print(time1,"vs",time2)
 
-        print("%s:\t%s\t%s%s" % ("gold", str(goldtime1) + " (" + diffgold1 + ")",
-                                "X ", str(goldtime2) + " (" + diffgold2 + ")"))
+        print("%s:\t%s\t%s%s" % ("gold", str(goldtime1), "X ", str(goldtime2) ))
+        print("%s:%s%s%s" % ("diff", " (" + diffgold1 + ")"," X ", "(" + diffgold2 + ")"))
+        #print("%s:\t%s\t%s%s" % ("gold", str(goldtime1) + " (" + diffgold1 + ")","X ", str(goldtime2) + " (" + diffgold2 + ")"))                                        
         #print("%s:\t%s" % ("gold",diffgold2) )
-
-        print("%s:%s%s%s" % ("kills", "  " + str(killstime1), "   X   ", str(killstime2)))
+        #print(f'{gold:str(goldtime1)} {kills: str(killstime1) }')
+        print("%s:%s%s%s" % ("kills", "   " + str(killstime1), "   X   ", str(killstime2)))
         print("%s:%s%s%s" % ("torres", "  " + str(torrestime1), "   X   ", str(torrestime2)))
-        print("%s:%s%s%s" % ("dragões", "  " + str(dragstime1), "   X   ", str(dragstime2)))
-        print("%s:%s%s%s" % ("baron", "  " + str(baronstime1), "   X   ", str(baronstime2)))
-        print("%s:%s%s%s" % ("inibidores", "  " + str(inibstime1), "   X   ", str(inibstime2)))
+        #print("%s:%s%s%s" % ("dragões", "  " + str(dragstime1), "   X   ", str(dragstime2)))
+        print("%s:%s" % ("drakes " + time1, "  " + str(dragstime1)))
+        print( "          X")
+        print("%s:%s" % ("drakes " + time2, "  " + str(dragstime2)))
+        print("%s:%s%s%s" % ("baron", "   " + str(baronstime1), "   X   ", str(baronstime2)))
+        print("%s:%s%s%s" % ("inibs", "   " + str(inibstime1), "   X   ", str(inibstime2)))
 
         # ------------------------ stats específicos ---------
-        print("-------------------------")
-        print("       ", time1)
+        print("-----------------------------------------")
+        #print("       ", time1)
         # top
         champtoptime1 = conteudo['gameMetadata']['blueTeamMetadata']['participantMetadata'][0]['championId']
         goldtoptime1 = conteudo['frames'][0]['blueTeam']['participants'][0]['totalGold']
@@ -162,7 +166,7 @@ while True:
         vidaatualtoptime1 = conteudo['frames'][0]['blueTeam']['participants'][0]['currentHealth']
         vidamaxtoptime1 = conteudo['frames'][0]['blueTeam']['participants'][0]['maxHealth']
         pctvidatoptime1 = round(vidaatualtoptime1/vidamaxtoptime1 * 100)
-        print(champtoptime1,":",killstoptime1,"/",mortestoptime1,"/",assiststoptime1)
+        #print(champtoptime1,":",killstoptime1,"/",mortestoptime1,"/",assiststoptime1)
         if pctvidatoptime1 == 0:
             pctvidatoptime1=(colored(str(pctvidatoptime1) + "%", 'grey'))
         elif pctvidatoptime1 < 20:
@@ -174,7 +178,7 @@ while True:
         else:
             pctvidatoptime1=(colored(str(pctvidatoptime1) + "%", 'green'))
 
-        print(pctvidatoptime1)
+        #print(pctvidatoptime1)
         # mid time 1
         champmidtime1 = conteudo['gameMetadata']['blueTeamMetadata']['participantMetadata'][1]['championId']
         goldmidtime1 = conteudo['frames'][0]['blueTeam']['participants'][1]['totalGold']
@@ -187,7 +191,7 @@ while True:
         pctvidamidtime1 = round(vidaatualmidtime1/vidamaxmidtime1 * 100) 
         #print(type(pctvidamidtime1))
         #print(pctvidamidtime1)
-        print(champmidtime1,":",killsmidtime1,"/",mortesmidtime1,"/",assistsmidtime1)
+        #print(champmidtime1,":",killsmidtime1,"/",mortesmidtime1,"/",assistsmidtime1)
 
         if pctvidamidtime1 == 0:
             pctvidamidtime1=(colored(str(pctvidamidtime1) + "%", 'grey'))
@@ -200,7 +204,7 @@ while True:
         else:
             pctvidamidtime1=(colored(str(pctvidamidtime1) + "%", 'green'))
              
-        print(pctvidamidtime1)                 
+        #print(pctvidamidtime1)                 
         #print(vidaatualmidtime1,vidamaxmidtime1,pctvidamidtime1,"%")
         # jg time 1
         champjgtime1 = conteudo['gameMetadata']['blueTeamMetadata']['participantMetadata'][2]['championId']
@@ -212,7 +216,7 @@ while True:
         vidaatualjgtime1 = conteudo['frames'][0]['blueTeam']['participants'][2]['currentHealth']
         vidamaxjgtime1 = conteudo['frames'][0]['blueTeam']['participants'][2]['maxHealth']
         pctvidajgtime1 = round(vidaatualjgtime1/vidamaxjgtime1 * 100) 
-        print(champjgtime1,":",killsjgtime1,"/",mortesjgtime1,"/",assistsjgtime1)
+        #print(champjgtime1,":",killsjgtime1,"/",mortesjgtime1,"/",assistsjgtime1)
 
         if pctvidajgtime1 == 0:
             pctvidajgtime1=(colored(str(pctvidajgtime1) + "%", 'grey'))
@@ -225,7 +229,7 @@ while True:
         else:
             pctvidajgtime1=(colored(str(pctvidajgtime1) + "%", 'green'))
              
-        print(pctvidajgtime1)    
+        #print(pctvidajgtime1)    
         # adc time 1
         champadtime1 = conteudo['gameMetadata']['blueTeamMetadata']['participantMetadata'][3]['championId']
         goldadtime1 = conteudo['frames'][0]['blueTeam']['participants'][3]['totalGold']
@@ -236,7 +240,7 @@ while True:
         vidaatualadtime1 = conteudo['frames'][0]['blueTeam']['participants'][3]['currentHealth']
         vidamaxadtime1 = conteudo['frames'][0]['blueTeam']['participants'][3]['maxHealth']
         pctvidaadtime1 = round(vidaatualadtime1/vidamaxadtime1 * 100) 
-        print(champadtime1,":",killsadtime1,"/",mortesadtime1,"/",assistsadtime1)
+        #print(champadtime1,":",killsadtime1,"/",mortesadtime1,"/",assistsadtime1)
 
         if pctvidaadtime1 == 0:
             pctvidaadtime1=(colored(str(pctvidaadtime1) + "%", 'grey'))
@@ -249,7 +253,7 @@ while True:
         else:
             pctvidaadtime1=(colored(str(pctvidaadtime1) + "%", 'green'))
              
-        print(pctvidaadtime1)    
+        #print(pctvidaadtime1)    
         # sup time 1
         champsuptime1 = conteudo['gameMetadata']['blueTeamMetadata']['participantMetadata'][4]['championId']
         goldsuptime1 = conteudo['frames'][0]['blueTeam']['participants'][4]['totalGold']
@@ -260,7 +264,7 @@ while True:
         vidaatualsuptime1 = conteudo['frames'][0]['blueTeam']['participants'][4]['currentHealth']
         vidamaxsuptime1 = conteudo['frames'][0]['blueTeam']['participants'][4]['maxHealth']
         pctvidasuptime1 = round(vidaatualsuptime1/vidamaxsuptime1 * 100) 
-        print(champsuptime1,":",killssuptime1,"/",mortessuptime1,"/",assistssuptime1)
+        #print(champsuptime1,":",killssuptime1,"/",mortessuptime1,"/",assistssuptime1)
 
         if pctvidasuptime1 == 0:
             pctvidasuptime1=(colored(str(pctvidasuptime1) + "%", 'grey'))
@@ -273,14 +277,14 @@ while True:
         else:
             pctvidasuptime1=(colored(str(pctvidasuptime1) + "%", 'green'))
              
-        print(pctvidasuptime1)   
+        #print(pctvidasuptime1)   
 
 
         # --------------------------------- TIME 2 ---------------------
 
 
-        print("-------------------------")
-        print("       ", time2)
+        #print("-----------------------------------------")
+        #print("       ", time2)
         # top
         champtoptime2 = conteudo['gameMetadata']['redTeamMetadata']['participantMetadata'][0]['championId']
         goldtoptime2 = conteudo['frames'][0]['redTeam']['participants'][0]['totalGold']
@@ -291,7 +295,7 @@ while True:
         vidaatualtoptime2 = conteudo['frames'][0]['redTeam']['participants'][0]['currentHealth']
         vidamaxtoptime2 = conteudo['frames'][0]['redTeam']['participants'][0]['maxHealth']
         pctvidatoptime2 = round(vidaatualtoptime2/vidamaxtoptime2 * 100)
-        print(champtoptime2,":",killstoptime2,"/",mortestoptime2,"/",assiststoptime2)
+        #print(champtoptime2,":",killstoptime2,"/",mortestoptime2,"/",assiststoptime2)
         if pctvidatoptime2 == 0:
             pctvidatoptime2=(colored(str(pctvidatoptime2) + "%", 'grey'))
         elif pctvidatoptime2 < 20:
@@ -303,7 +307,7 @@ while True:
         else:
             pctvidatoptime2=(colored(str(pctvidatoptime2) + "%", 'green'))
 
-        print(pctvidatoptime2)
+        #print(pctvidatoptime2)
         # mid time 2
         champmidtime2 = conteudo['gameMetadata']['redTeamMetadata']['participantMetadata'][1]['championId']
         goldmidtime2 = conteudo['frames'][0]['redTeam']['participants'][1]['totalGold']
@@ -316,7 +320,7 @@ while True:
         pctvidamidtime2 = round(vidaatualmidtime2/vidamaxmidtime2 * 100) 
         #print(type(pctvidamidtime2))
         #print(pctvidamidtime2)
-        print(champmidtime2,":",killsmidtime2,"/",mortesmidtime2,"/",assistsmidtime2)
+        #print(champmidtime2,":",killsmidtime2,"/",mortesmidtime2,"/",assistsmidtime2)
 
         if pctvidamidtime2 == 0:
             pctvidamidtime2=(colored(str(pctvidamidtime2) + "%", 'grey'))
@@ -329,7 +333,7 @@ while True:
         else:
             pctvidamidtime2=(colored(str(pctvidamidtime2) + "%", 'green'))
              
-        print(pctvidamidtime2)                 
+        #print(pctvidamidtime2)                 
         #print(vidaatualmidtime2,vidamaxmidtime2,pctvidamidtime2,"%")
         # jg time 2
         champjgtime2 = conteudo['gameMetadata']['redTeamMetadata']['participantMetadata'][2]['championId']
@@ -341,7 +345,7 @@ while True:
         vidaatualjgtime2 = conteudo['frames'][0]['redTeam']['participants'][2]['currentHealth']
         vidamaxjgtime2 = conteudo['frames'][0]['redTeam']['participants'][2]['maxHealth']
         pctvidajgtime2 = round(vidaatualjgtime2/vidamaxjgtime2 * 100) 
-        print(champjgtime2,":",killsjgtime2,"/",mortesjgtime2,"/",assistsjgtime2)
+        #print(champjgtime2,":",killsjgtime2,"/",mortesjgtime2,"/",assistsjgtime2)
 
         if pctvidajgtime2 == 0:
             pctvidajgtime2=(colored(str(pctvidajgtime2) + "%", 'grey'))
@@ -354,7 +358,7 @@ while True:
         else:
             pctvidajgtime2=(colored(str(pctvidajgtime2) + "%", 'green'))
              
-        print(pctvidajgtime2)    
+        #print(pctvidajgtime2)    
         # adc time 2
         champadtime2 = conteudo['gameMetadata']['redTeamMetadata']['participantMetadata'][3]['championId']
         goldadtime2 = conteudo['frames'][0]['redTeam']['participants'][3]['totalGold']
@@ -365,7 +369,7 @@ while True:
         vidaatualadtime2 = conteudo['frames'][0]['redTeam']['participants'][3]['currentHealth']
         vidamaxadtime2 = conteudo['frames'][0]['redTeam']['participants'][3]['maxHealth']
         pctvidaadtime2 = round(vidaatualadtime2/vidamaxadtime2 * 100) 
-        print(champadtime2,":",killsadtime2,"/",mortesadtime2,"/",assistsadtime2)
+        #print(champadtime2,":",killsadtime2,"/",mortesadtime2,"/",assistsadtime2)
 
         if pctvidaadtime2 == 0:
             pctvidaadtime2=(colored(str(pctvidaadtime2) + "%", 'grey'))
@@ -378,7 +382,7 @@ while True:
         else:
             pctvidaadtime2=(colored(str(pctvidaadtime2) + "%", 'green'))
              
-        print(pctvidaadtime2)    
+        #print(pctvidaadtime2)    
         # sup time 2
         champsuptime2 = conteudo['gameMetadata']['redTeamMetadata']['participantMetadata'][4]['championId']
         goldsuptime2 = conteudo['frames'][0]['redTeam']['participants'][4]['totalGold']
@@ -389,7 +393,7 @@ while True:
         vidaatualsuptime2 = conteudo['frames'][0]['redTeam']['participants'][4]['currentHealth']
         vidamaxsuptime2 = conteudo['frames'][0]['redTeam']['participants'][4]['maxHealth']
         pctvidasuptime2 = round(vidaatualsuptime2/vidamaxsuptime2 * 100) 
-        print(champsuptime2,":",killssuptime2,"/",mortessuptime2,"/",assistssuptime2)
+        #print(champsuptime2,":",killssuptime2,"/",mortessuptime2,"/",assistssuptime2)
 
         if pctvidasuptime2 == 0:
             pctvidasuptime2=(colored(str(pctvidasuptime2) + "%", 'grey'))
@@ -402,7 +406,23 @@ while True:
         else:
             pctvidasuptime2=(colored(str(pctvidasuptime2) + "%", 'green'))
              
-        print(pctvidasuptime2)  
+        #print(pctvidasuptime2) 
+
+        #teste nova tabela
+        print("       ", time1,"      "," VS  ", time2)
+        print(champtoptime1,":",killstoptime1,"/",mortestoptime1,"/",assiststoptime1,"       ",champtoptime2,":",killstoptime2,"/",mortestoptime2,"/",assiststoptime2)
+        print("            ", pctvidatoptime1," VS  ", pctvidatoptime2)
+        print(champmidtime1,":",killsmidtime1,"/",mortesmidtime1,"/",assistsmidtime1,"       ",champmidtime2,":",killsmidtime2,"/",mortesmidtime2,"/",assistsmidtime2)
+        print("            ", pctvidamidtime1,"  VS ", pctvidamidtime2)
+        print(champjgtime1,":",killsjgtime1,"/",mortesjgtime1,"/",assistsjgtime1,"       ",champjgtime2,":",killsjgtime2,"/",mortesjgtime2,"/",assistsjgtime2)
+        print("            ", pctvidajgtime1,"  VS ", pctvidajgtime2)
+        print(champadtime1,":",killsadtime1,"/",mortesadtime1,"/",assistsadtime1,"       ",champadtime2,":",killsadtime2,"/",mortesadtime2,"/",assistsadtime2)
+        print("            ", pctvidaadtime1,"  VS ", pctvidaadtime2)
+        print(champsuptime1,":",killssuptime1,"/",mortessuptime1,"/",assistssuptime1,"       ",champsuptime2,":",killssuptime2,"/",mortessuptime2,"/",assistssuptime2)
+        print("            ", pctvidasuptime1,"  VS ", pctvidasuptime2)
+
+
+
         #print(champtoptime2,champmidtime2,champjgtime2)
         #print(champadtime2,champsuptime2)
         #toptime2 = conteudo['frames'][0]['redTeam']['totalGold']

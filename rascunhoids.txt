@@ -164,3 +164,20 @@ CLG vs FLY
 2021-03-06 22:00:00-03:00
 105658534675811051
 {'name': 'LCS', 'slug': 'lcs'}
+
+ecooh
+hugohavoc
+astrofis
+
+bot !compra
+bot !id
+!delay
+discord
+
+colocar tempo do drake e tempo atual do jogo
+
+colocar descrição, coisa de follow
+vip, mod
+email profissional
+
+https://lolapi.com.br/?affiliate=lolapis
