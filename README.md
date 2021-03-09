@@ -27,8 +27,12 @@ Install dependency
 `pip3 install requests`
 
 `pip install python-dateutil --upgrade`
-
+`pip install urllib --upgrade`
 executar a cada 10s, se n da erro
+
+"terminal.integrated.fontSize" : 15,
+
+"D:\\windows\\Documents\\BET\\new_api\\Scripts\\python.exe"
 
 TODO
 tentar reduzir ao máximo o tempo q atualiza, ir testando
