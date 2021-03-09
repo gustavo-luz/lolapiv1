@@ -5,11 +5,20 @@ from lolesports_api import get_latest_date
 import time
 from time import sleep
 from termcolor import colored
+#odds
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import urllib.request
+
 
 # pip install python-urllib2 --upgrade
 
-#cblol
-id = "105663539175467324"
+# rivalry odd
+#urlodd = "https://www.rivalry.com/pt/match/294698" #UNCOM
+
+
+#cblol105658534675811058
+id = "105658534675811058"
 
 #lec
 #id = "105551618308363551"
@@ -139,7 +148,24 @@ while True:
         time2 = time2[0:3]        
         print(time1,"vs",time2)
 
-        print("%s:\t%s\t%s%s" % ("gold", str(goldtime1), "X ", str(goldtime2) ))
+
+        """
+        # odds rivalry 
+        req = urllib.request.Request(urlodd, headers={'User-Agent': 'Mozilla/5.0'})
+        html = urllib.request.urlopen(req).read()
+        bs = BeautifulSoup(html,'lxml')
+        mydivs = bs.find_all("div", {"class": "odds-flex-container"})
+        numbers = [d.text for d in mydivs]
+        oddtime1 = bs.find_all("div", {"class": "team-name outcome-one"})
+        oddtime1 = [d.text for d in oddtime1]
+        oddtime2 = bs.find_all("div", {"class": "team-name outcome-two"})
+        oddtime2 = [d.text for d in oddtime2]
+        print("Odds:", oddtime1, numbers[0], "vs",numbers[1] , oddtime2 )
+        """
+
+
+
+        print("%s:\t%s\t%s%s%s%s" % ("gold", str(goldtime1), "X ", str(goldtime2), " total:", str(goldtime1+goldtime2) ))
         print("%s:%s%s%s" % ("diff", " (" + diffgold1 + ")"," X ", "(" + diffgold2 + ")"))
         #print("%s:\t%s\t%s%s" % ("gold", str(goldtime1) + " (" + diffgold1 + ")","X ", str(goldtime2) + " (" + diffgold2 + ")"))                                        
         #print("%s:\t%s" % ("gold",diffgold2) )
@@ -407,21 +433,29 @@ while True:
             pctvidasuptime2=(colored(str(pctvidasuptime2) + "%", 'green'))
              
         #print(pctvidasuptime2) 
-
+  
         #teste nova tabela
-        print("       ", time1,"      "," VS  ", time2)
+        print("         ", time1,"    "," VS  ", time2)
         print(champtoptime1,":",killstoptime1,"/",mortestoptime1,"/",assiststoptime1,"       ",champtoptime2,":",killstoptime2,"/",mortestoptime2,"/",assiststoptime2)
-        print("            ", pctvidatoptime1," VS  ", pctvidatoptime2)
+        print("            ", pctvidatoptime1,"     ", pctvidatoptime2)
         print(champmidtime1,":",killsmidtime1,"/",mortesmidtime1,"/",assistsmidtime1,"       ",champmidtime2,":",killsmidtime2,"/",mortesmidtime2,"/",assistsmidtime2)
-        print("            ", pctvidamidtime1,"  VS ", pctvidamidtime2)
+        print("            ", pctvidamidtime1,"     ", pctvidamidtime2)
         print(champjgtime1,":",killsjgtime1,"/",mortesjgtime1,"/",assistsjgtime1,"       ",champjgtime2,":",killsjgtime2,"/",mortesjgtime2,"/",assistsjgtime2)
-        print("            ", pctvidajgtime1,"  VS ", pctvidajgtime2)
+        print("            ", pctvidajgtime1,"     ", pctvidajgtime2)
         print(champadtime1,":",killsadtime1,"/",mortesadtime1,"/",assistsadtime1,"       ",champadtime2,":",killsadtime2,"/",mortesadtime2,"/",assistsadtime2)
-        print("            ", pctvidaadtime1,"  VS ", pctvidaadtime2)
+        print("            ", pctvidaadtime1,"     ", pctvidaadtime2)
         print(champsuptime1,":",killssuptime1,"/",mortessuptime1,"/",assistssuptime1,"       ",champsuptime2,":",killssuptime2,"/",mortessuptime2,"/",assistssuptime2)
-        print("            ", pctvidasuptime1,"  VS ", pctvidasuptime2)
+        print("            ", pctvidasuptime1,"     ", pctvidasuptime2)
 
 
+        print("farmjg",farmjgtime1," ",farmjgtime2)
+        print(type(farmjgtime2))
+        """
+        if farmjgtime1 or farmjgtime2 == '4':
+            #em segundos, 1min e 45 em média
+            tempo = 105
+            print("tempo: ")
+        """
 
         #print(champtoptime2,champmidtime2,champjgtime2)
         #print(champadtime2,champsuptime2)

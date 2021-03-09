@@ -1,0 +1,35 @@
+ideias
+
+
+api
+listar todas as possíveis melhorias e ir implementando junto
+cada um faz seus commits abro live e a gente analisa
+hoje foi o tempo de drake por ex
+se um jg ou o outro tiver 4 de cs, time: 1:45
+próximo tempo: 1h55
+pode fazer isso tb com outros stats como kills, ai aparece uma outra cor
+se tiver uma kill , criar o csv pra várias coisas
+
+no python msm da pra colocar graficos com matplotlib
+fazer o frontend no naipe do aureom e a gente vai atualizando 
+
+pegar as odds das principais casas de apostas , ver possibilidade de win win
+
+
+futuro: 
+rodar um algoritmo pra verificar os confrontos passados do campeonato
+e prever resultados com certa confiança
+analisador de comps: nos outros jogos dessa liga qual foi o wr em cada estágio de jogo
+com as comps
+
+
+
+software
+
+
+
+hardware
+minerar criptomoedas em casa com raspberry pi
+automação residencial - luzes, ar condicionado com alexa
+esteira de produção com braço robótico
+projetos de impressão 3d
