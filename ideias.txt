@@ -5,6 +5,8 @@ api
 listar todas as possíveis melhorias e ir implementando junto
 cada um faz seus commits abro live e a gente analisa
 hoje foi o tempo de drake por ex
+drake: iniciat timer a partir do primeiro morto
+primeiro é fixo: 5 min
 se um jg ou o outro tiver 4 de cs, time: 1:45
 próximo tempo: 1h55
 pode fazer isso tb com outros stats como kills, ai aparece uma outra cor

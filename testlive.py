@@ -9,6 +9,9 @@ from termcolor import colored
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import urllib.request
+#tempos e arquivo de log
+import csv
+import pandas
 
 
 # pip install python-urllib2 --upgrade
@@ -162,6 +165,7 @@ while True:
         oddtime2 = [d.text for d in oddtime2]
         print("Odds:", oddtime1, numbers[0], "vs",numbers[1] , oddtime2 )
         """
+        
 
 
 
@@ -448,14 +452,35 @@ while True:
         print("            ", pctvidasuptime1,"     ", pctvidasuptime2)
 
 
-        print("farmjg",farmjgtime1," ",farmjgtime2)
-        print(type(farmjgtime2))
-        """
-        if farmjgtime1 or farmjgtime2 == '4':
-            #em segundos, 1min e 45 em média
-            tempo = 105
-            print("tempo: ")
-        """
+        #print("farmjg",farmjgtime1," ",farmjgtime2)
+        #print(type(farmjgtime2))
+        df = pandas.read_csv('D://windows//Documents//BET//new_api//lolapiv1//log.csv')
+        #print(df)
+        #valor = df['time'][0]
+        #print(valor)
+
+        #print(df['time'][0])
+        cs = farmjgtime1
+
+        if cs < 4:
+            df['time'][0] = 0
+        elif cs == 4:
+            df['time'][0] = 105
+        elif cs > 4:
+            df['time'][0] = df['time'][0] + 10
+
+        #se for menor que 4, escreve 0 no tempo
+        #print(df['time'][0])
+        #print(df['time'][0])
+        #print(df['time'][0] // 60)
+        #print(df['time'][0] % 60)
+        print("Tempo de jogo:",df['time'][0] // 60, ":",df['time'][0] % 60)
+        #tempo de jogo é a transformação de segundos pra minutos
+        
+
+        df.to_csv('D://windows//Documents//BET//new_api//lolapiv1//log.csv')
+        print(valor)
+
 
         #print(champtoptime2,champmidtime2,champjgtime2)
         #print(champadtime2,champsuptime2)

@@ -118,3 +118,45 @@ email profissional
 https://lolapi.com.br/?affiliate=lolapis
 
 
+
+RNSA vs REDA
+2021-03-09T21:00:00Z
+2021-03-09 18:00:00-03:00
+105562692794240184
+105562692794240185
+{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
+
+FURA vs ITZA
+2021-03-09T22:00:00Z
+2021-03-09 19:00:00-03:00
+105562692794240134
+105562692794240135
+{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
+
+VRXA vs KBMA
+2021-03-09T23:00:00Z
+2021-03-09 20:00:00-03:00
+105562692794240168
+105562692794240169
+{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
+
+
+PNGA vs FLAA
+2021-03-10T00:00:00Z
+2021-03-09 21:00:00-03:00
+105562692794240126
+105562692794240127
+{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
+
+
+
+
+
+
+
+
+
+
+
+
+
