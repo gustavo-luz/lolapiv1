@@ -21,7 +21,7 @@ import pandas
 
 
 #cblol105658534675811058
-id = "105562692794240169"
+id = "105562692794240159"
 
 #lec
 #id = "105551618308363551"
@@ -48,8 +48,9 @@ while True:
         else:
             now = now - datetime.timedelta(seconds=now.second,microseconds=now.microsecond - datetime.timedelta(seconds=10))
 
-        
-        sleep(10) #UNCOM
+        print(now)
+        #se for divisivel por 10, continua
+        sleep(8.5) #UNCOM
         
         #print(now)
         
