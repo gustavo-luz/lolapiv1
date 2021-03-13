@@ -13,7 +13,7 @@ from time import sleep
 while True: #UNCOM
     #try:
         
-        url = "https://www.rivalry.com/pt/match/286241"
+        url = "https://www.rivalry.com/pt/match/295179"
         urlhannah = "https://www.bet365.com/#/IP/EV204480595581196172C151"
         #print(url)
 

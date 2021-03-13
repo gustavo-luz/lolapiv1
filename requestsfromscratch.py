@@ -21,7 +21,7 @@ import pandas
 
 
 #cblol105658534675811058
-id = "105562692794240159"
+id = "105522958534618129"
 
 #lec
 #id = "105551618308363551"
@@ -50,7 +50,7 @@ while True:
 
         print(now)
         #se for divisivel por 10, continua
-        sleep(8.5) #UNCOM
+        sleep(10) #UNCOM
         
         #print(now)
         

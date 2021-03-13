@@ -119,37 +119,36 @@ https://lolapi.com.br/?affiliate=lolapis
 
 
 
-ITZA vs VRXA
-2021-03-10T20:00:00Z
-2021-03-10 17:00:00-03:00
-105562692794240159
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-
-
-FLAA vs RNSA
-2021-03-10T21:00:00Z
-2021-03-10 18:00:00-03:00
-105562692794240131
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-
-CRZA vs FURA
-2021-03-10T22:00:00Z
-2021-03-10 19:00:00-03:00
-105562692794240103
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-
-KBMA vs PNGA
-2021-03-10T23:00:00Z
-2021-03-10 20:00:00-03:00
-105562692794240163
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-
-REDA vs LLLA
-2021-03-11T00:00:00Z
-2021-03-10 21:00:00-03:00
-105562692794240173
-{'name': 'CBLOL Academy', 'slug': 'cblol_academy'}
-
+SK vs AST
+2021-03-13T16:00:00Z
+2021-03-13 13:00:00-03:00
+105522958534618124
+{'name': 'LEC', 'slug': 'lec'}
+S04 vs VIT
+2021-03-13T17:00:00Z
+2021-03-13 14:00:00-03:00
+105522958534683748
+{'name': 'LEC', 'slug': 'lec'}
+VRX vs CRZ
+2021-03-13T17:00:00Z
+2021-03-13 14:00:00-03:00
+105539760574818425
+{'name': 'CBLOL', 'slug': 'cblol-brazil'}
+XL vs RGE
+2021-03-13T18:00:00Z
+2021-03-13 15:00:00-03:00
+105522958534618158
+{'name': 'LEC', 'slug': 'lec'}
+FUR vs RED
+2021-03-13T18:00:00Z
+2021-03-13 15:00:00-03:00
+105539760574818397
+{'name': 'CBLOL', 'slug': 'cblol-brazil'}
+FNC vs MSF
+2021-03-13T19:00:00Z
+2021-03-13 16:00:00-03:00
+105522958534683732
+{'name': 'LEC', 'slug': 'lec'}
 
 
 
