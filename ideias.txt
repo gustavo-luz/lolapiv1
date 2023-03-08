@@ -2,36 +2,24 @@ ideias
 
 
 api
-listar todas as possíveis melhorias e ir implementando junto
-cada um faz seus commits abro live e a gente analisa
-hoje foi o tempo de drake por ex
-drake: iniciat timer a partir do primeiro morto
-primeiro é fixo: 5 min
-se um jg ou o outro tiver 4 de cs, time: 1:45
-próximo tempo: 1h55
-pode fazer isso tb com outros stats como kills, ai aparece uma outra cor
-se tiver uma kill , criar o csv pra várias coisas
+list all possible improvements and implement them together
+each one makes their commits I open live and we analyze
+today was drake time for ex
+drake: initiate timer from first dead
+first is fixed: 5 min
+if one jg or the other has 4 cs, time: 1:45
+next time: 1h55
+you can also do this with other stats like kills, then another color appears
+if you have a kill , create the csv for several things
 
-no python msm da pra colocar graficos com matplotlib
-fazer o frontend no naipe do aureom e a gente vai atualizando 
+in python msm you can put graphics with matplotlib
+do the frontend in the suit of aureom and we will update
 
-pegar as odds das principais casas de apostas , ver possibilidade de win win
-
-
-futuro: 
-rodar um algoritmo pra verificar os confrontos passados do campeonato
-e prever resultados com certa confiança
-analisador de comps: nos outros jogos dessa liga qual foi o wr em cada estágio de jogo
-com as comps
+get the odds from the main bookmakers, see the possibility of win win
 
 
-
-software
-
-
-
-hardware
-minerar criptomoedas em casa com raspberry pi
-automação residencial - luzes, ar condicionado com alexa
-esteira de produção com braço robótico
-projetos de impressão 3d
+future:
+run an algorithm to check the past matches of the championship
+and predict results with some confidence
+comps analyzer: in the other games of this league what was the wr in each game stage
+with the comps

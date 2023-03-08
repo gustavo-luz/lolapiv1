@@ -6,48 +6,54 @@ Also includes a small example.
 
 ## Installation
 
-Download Python Lolesports-API
 
-`git clone https://github.com/gustavo-luz/lolapiv1
+```git clone https://github.com/gustavo-luz/lolapiv1```
 
-Activate venv
-
-'source bin/activate'
-
-Para desativar
-'deactivate'
-
-select python interpreter at settings.json to 
-"python.pythonPath": "/home/gustavo-luz/HDD/manjaro/code/python/lolapi/bin/python3.8",
+Activate venv: ```source bin/activate```
 
 
 
-Install dependency
+To deactivate ```deactivate```
 
+
+Install dependencies
+
+
+```python
 `pip3 install requests`
 
 `pip install python-dateutil --upgrade`
 `pip install urllib --upgrade`
+
+```
+
+
 execute every 10 seconds
 
-"terminal.integrated.fontSize" : 15,
+```python
+find_live_matches.py searches for ongoing matches
+```
+```python
+find_next_matches.py searches for future matches
+```
 
-"D:\\windows\\Documents\\BET\\new_api\\Scripts\\python.exe"
+```python
+main_live_game_stats.py receives the match id and keep displaying stats of the game every 10 seconds consuming the lolespors api
+```
 
-TODO
+
+TODO's
+
 try to reduce the time that updates as much as possible, go testing
 the way it is now, it never fails
 
 
-put a graph with life
+put a graph with life of players
 
 
 format to make everything easy to read
 
-future: gold chart
-icons,
-
- frontend
+future: gold chart, icons,frontend
 
 
 Examples:

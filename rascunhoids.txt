@@ -100,9 +100,6 @@ FNC vs SK
 
 
 
-ecooh
-hugohavoc
-astrofis
 
 bot !compra
 bot !id
