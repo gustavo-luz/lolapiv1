@@ -28,29 +28,29 @@ Install dependency
 
 `pip install python-dateutil --upgrade`
 `pip install urllib --upgrade`
-executar a cada 10s, se n da erro
+execute every 10 seconds
 
 "terminal.integrated.fontSize" : 15,
 
 "D:\\windows\\Documents\\BET\\new_api\\Scripts\\python.exe"
 
 TODO
-tentar reduzir ao máximo o tempo q atualiza, ir testando
-do jeito q ta agora n da erro nunca
+try to reduce the time that updates as much as possible, go testing
+the way it is now, it never fails
 
 
-botar um gráfico com a vida
+put a graph with life
 
 
-formatar pra ficar tudo fácil de ler
+format to make everything easy to read
 
-futuro: gráfico de gold
-ícones,
+future: gold chart
+icons,
 
  frontend
 
 
-
+Examples:
 
 BIG vs MOUZ
 2021-03-02T19:00:00Z
@@ -59,7 +59,6 @@ BIG vs MOUZ
 {'name': 'Prime League', 'slug': 'primeleague'}
 
 BIG vs MOUZ
-funcionando2
 105562556576287733
 2021-03-02T19:00:00Z
 {'id': '105266091639104326', 'slug': 'primeleague', 'name': 'Prime League', 'image': 'http://static.lolesports.com/leagues/PrimeLeagueResized.png', 'priority': 1000}
